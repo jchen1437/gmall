@@ -10,7 +10,7 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/gmall?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
-#dubbo的配置
+  #dubbo的配置
   dubbo:
     #在dubbo中的服务名称
     application: user-service

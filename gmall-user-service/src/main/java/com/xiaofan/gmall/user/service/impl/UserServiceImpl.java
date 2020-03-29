@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     public List<UmsMemberReceiveAddress> getReceiveAddressByMemeberId(String memberId) {
 
         Example e = new Example(UmsMemberReceiveAddress.class);
-        e.createCriteria().andEqualTo("memberId",memberId);
+        e.createCriteria().andEqualTo("memberId", memberId);
 
         return umsMemberReceiveAddressMapper.selectByExample(e);
     }

@@ -1,0 +1,40 @@
+#服务的端口号
+server:
+  port: 8071
+
+#jdbc
+spring:
+  datasource:
+    type:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gmall?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+  #dubbo的配置
+  dubbo:
+    #在dubbo中的服务名称
+    application: manager-service
+    registry:
+      #zookeeper注册中心的地址
+      address: 192.168.42.129:2181
+      #zookeeper的通讯协议名称
+      protocol: zookeeper
+    protocol:
+      #dubbo通讯协议名称
+      name: dubbo
+    #dubbo的服务的扫描路径
+    base-package: com.xiaofan.gmall
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+#日志级别
+logging:
+  level:
+    root: info
+
+
